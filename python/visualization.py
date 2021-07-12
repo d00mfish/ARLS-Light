@@ -159,7 +159,7 @@ def microphone_update(audio_samples):
         mel /= mel_gain.value
         mel = mel_smoothing.update(mel)
         # Map filterbank output onto LED strip
-        output = visualization_effect(mel)
+        output = visualize_scroll(mel)
         led.pixels = output
         led.update()
 
@@ -175,9 +175,6 @@ samples_per_frame = int(config.MIC_RATE / config.FPS)
 
 # Array containing the rolling audio sample window
 y_roll = np.random.rand(config.N_ROLLING_HISTORY, samples_per_frame) / 1e16
-
-visualization_effect = visualize_scroll
-"""Visualization effect to display on the LED strip"""
 
 
 if __name__ == '__main__':
