@@ -1,6 +1,9 @@
 # Audio Reactive LED Strip
 Real-time LED strip music visualization using Python and the ESP8266 or Raspberry Pi.
 
+Light Version: Only Scroll animation, no gui to make it lightweight and reliable
+
+
 ![block diagram](images/block-diagram.png)
 
 ![overview](images/description-cropped.gif)
